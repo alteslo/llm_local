@@ -8,7 +8,16 @@
 ## Остановить контейнер
 `docker compose stop`
 
+docker compose -f docker-compose.base.yml up -d
+docker compose -f docker-compose.base.yml -f docker-compose.ui.yml up -d
+docker compose -f docker-compose.base.yml -f docker-compose.ui.yml -f docker-compose.metrics.yml up -d
+## Перезапустить контейнер
+docker compose restart ollama
 
+
+
+## Зайти в контейнер
+docker exec -it ollama /bin/bash
 
 # Ollama
 ## Скачать модель
